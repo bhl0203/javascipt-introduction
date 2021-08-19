@@ -16,6 +16,7 @@ function onLoginSubmit(event) {
     const username = loginInput.value;
     localStorage.setItem(USERNAME_KEY, username);
     paintGreetings(username);
+    location.reload();
 }
 
 function onLogOut(event) {
@@ -27,7 +28,7 @@ function onLogOut(event) {
 
 function paintGreetings(username) {
     greeting.classList.toggle("hidden");
-    greeting.innerText = `Hello ${savedUsername}`;
+    greeting.innerText = `Hello ${savedUsername}.`;
 }
 
 

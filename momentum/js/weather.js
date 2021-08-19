@@ -20,4 +20,4 @@ function onGeoFail() {
     alert("Cannot find you. No weather for you.");
 }
 
-navigator.geolocation.getCurrentPosition(onGeoSuccess,onGeoFail);
+//navigator.geolocation.getCurrentPosition(onGeoSuccess,onGeoFail);

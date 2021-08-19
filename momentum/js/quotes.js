@@ -1,51 +1,44 @@
 const quotes = [
     {
-        quote: "quote1",
-        author: "me1;"
+        quote: "Love For All, Hatred For None.",
+        author: "Khalifatul Masih III"
     },
     {
-        quote: "quote2",
-        author: "me2;"
+        quote: "Change the world by being yourself.",
+        author: "Amy Poehler"
     },
     {
-        quote: "quote3",
-        author: "me3;"
+        quote: "Every moment is a fresh beginning.",
+        author: "T.S Eliot"
     },
     {
-        quote: "quote4",
-        author: "me4;"
+        quote: "Never regret anything that made you smile.",
+        author: "Mark Twain"
     },
     {
-        quote: "quote5",
-        author: "me5;"
+        quote: "Die with memories, not dreams.",
+        author: "Unknown"
     },
     {
-        quote: "quote6",
-        author: "me6"
+        quote: "Aspire to inspire before we expire.",
+        author: "Unknown"
     },
     {
-        quote: "quote7",
-        author: "me7"
+        quote: "Everything you can imagine is real.",
+        author: "Pablo Picasso"
     },
     {
-        quote: "quote8",
-        author: "me8"
+        quote: "Simplicity is the ultimate sophistication.",
+        author: "Leonardo da Vinci"
     },
     {
-        quote: "quote9",
-        author: "me9;"
+        quote: "Whatever you do, do it well.",
+        author: "Walt Disney"
     },
     {
-        quote: "quote10",
-        author: "me10;"
+        quote: "What we think, we become.",
+        author: "Buddha"
     },
-
-
-
-
-
-
-
 ]
 
 const quote = document.querySelector("#quote span:first-child");
@@ -54,5 +47,5 @@ const author = document.querySelector("#quote span:last-child");
 const rand = Math.floor(Math.random() * quotes.length);
 const todaysquote = quotes[rand];
 
-quote.innerText = todaysquote.quote;
+quote.innerText = todaysquote.quote +" - \n";
 author.innerText = todaysquote.author;

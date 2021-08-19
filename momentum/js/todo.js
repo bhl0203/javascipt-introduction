@@ -4,7 +4,14 @@ const toDoList = document.getElementById("todo-list");
 
 const TODOS_KEY = "todos"
 
+const toDoButton = document.getElementById("todo-button");
+
+
 let toDos = [];
+
+function onMouseClick(event) {
+    toDoList.classList.toggle("hidden");
+}
 
 function saveToDos() {
     localStorage.setItem("todos", JSON.stringify(toDos));
@@ -15,16 +22,22 @@ function deleteToDo(event) {
     li.remove();
     toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
     saveToDos();
+    event.preventDefault();
 }
 
 function paintToDo(newTodo) {
-    const li = document.createElement("li");
+    const li = document.createElement("div");
     li.id = newTodo.id;
-    const span = document.createElement("span");
+    li.className = "outerTodoList";
+    
+    const span = document.createElement("div");
     span.innerText = newTodo.text;
+    span.className = "innerTodoList";
 
-    const button = document.createElement("button");
+    const button = document.createElement("div");
     button.innerText = "❌";
+    button.className = "removeButton";
+
     button.onclick = deleteToDo;
     li.appendChild(span);
     li.appendChild(button);
@@ -55,5 +68,7 @@ if (savedToDos !== null) {
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo);
 }
+
+toDoButton.onclick = onMouseClick;
 
 

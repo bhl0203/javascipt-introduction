@@ -1,50 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Momentum App</title>
+    <style>
+        .button{
+            width:5px;
+        }
+    </style>
 </head>
+
 <body>
+    <div id = "bgImage">
+        <h2 id="clock" class = "clock">00:00</h2>
+        <h1 id="greeting" class="hidden greeting"></h1>
+
+        <form id="login-form" class="hidden login-form">
+            <input type="text" placeholder="What is your name?" required />
+        </form>
 
 
-    <h2 id="clock">00:00</h2>
+        <h1 class="essential-comment">What are you going to do today?</h1>
+        <form id="todo-form" class="todo-form">
+            <input type="text" required/>
+        </form>
+        <div id = "todo-button" class="todo-button">
+            Todo
+        </div>
+    <div id="todo-list" class="todo-list hidden" style="list-style: none;">
 
-
-    <form id="login-form" class="hidden">
-        <input type="text" placeholder="What is your name?" required/>
-        <button>Log In</button>
-    </form>
-    
-
-    <h1 id="greeting" class="hidden"></h1>
-    <button id = "Log-Out" class="hidden">Log Out</button>
-    <form id="todo-form">
-        <input type="text" placeholder="Write a To do and Press enter" required/>
-    </form>
-
-    <ul id="todo-list">
-
-    </ul>
-
-    <div id="quote">
-        <span></span>
-        <span></span>
     </div>
-    <div id="weather">
-        <span></span>
-        <span></span>
+ 
+
+        <div id="weather" class="weather">
+            <span></span>
+            <span></span>
+        </div>
+        <div id="Log-Out" class="hidden Log-Out">Log Out</div>
+        <div id="quote" class="quote">
+            <span></span>
+            <span></span>
+        </div>
+        <script src="js/background.js"></script>
+        <script src="js/greetings.js"></script>
+        <script src="js/clock.js"></script>
+        <script src="js/quotes.js"></script>
+        <script src="js/todo.js"></script>
+        <script src="js/weather.js"></script>
+
     </div>
-
-    <script src="js/background.js"></script>
-    <script src="js/greetings.js"></script>
-    <script src="js/clock.js"></script>
-    <script src="js/quotes.js"></script>
-    <script src="js/todo.js"></script>
-    <script src="js/weather.js"></script>
-
 
 </body>
+
 </html>

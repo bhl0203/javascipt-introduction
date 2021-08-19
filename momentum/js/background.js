@@ -7,12 +7,20 @@ const images = [
     "5.jpg",
 ]
 
+
+const div = document.getElementById("bgImage");
+div.className = "bgImage";
+
 const randimage = Math.floor(Math.random() * images.length);
 const chosenImage = images[randimage];
 
-const bgImage = document.createElement("img");
 
+div.style.backgroundImage = `url("img/${chosenImage}")`;
+
+console.dir(div);
+
+
+/*
 bgImage.src = `img/${chosenImage}`;
 bgImage.id = "img";
-
-document.body.append(bgImage);
+*/
